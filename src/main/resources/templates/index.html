@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pecunia</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css" />
+</head>
+<body>
+<div class="container">
+    <h1>TEST</h1>
+
+    <table class="table table-bordered">
+        <tr>
+            <td>Id</td>
+            <td>waluta</td>
+            <td>kupno</td>
+            <td>sprzedaz</td>
+            <td>opis</td>
+            <td>rok</td>
+            <td>status</td>
+        </tr>
+        <th:block th:each="banknot : ${banknoty}">
+            <tr>
+                <td th:text="${banknot.id}"></td>
+<!--                <td th:text="${banknot.currency}"></td>-->
+                <td th:text="${banknot.priceBuy}"></td>
+                <td th:text="${banknot.priceSell}"></td>
+                <td th:text="${banknot.descryption}"></td>
+                <td th:text="${banknot.year}"></td>
+<!--                <td th:text="${banknot.denomination}"></td>-->
+<!--                <td th:if="${error != null && error.summary != null}"> nie istnieje</td>-->
+<!--                <td th:text="${error != null && error.summary != null} ?: ${banknot.status}"></td>-->
+<!--                <td th:if="${error != null && error.summary != null} == false "> test </td>-->
+<!--                <td th:text="*{{banknot.status}} ? 'jest' : 'brak' ">-->
+
+                 <td>   TEST    </td>
+            </tr>
+        </th:block>
+    </table>
+
+    <p th:text="${coin.getComposition()}"></p>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</body>
+</html>
